@@ -5,6 +5,70 @@
 			"style": {
 				"navigationBarTitleText": "旅游首页"
 			}
+		},
+		//--------------------微信授权登录--------------------
+		//#ifdef MP-WEIXIN
+		{
+			"path": "pages/HOME/wxAuthorize",
+			"style": {
+				"navigationStyle": "custom"
+			}
+		},
+		//#endif
+		//----------------------------个人中心模块----------------------------
+		{
+			"path": "pages/GRZX/user",
+			"style": {
+				"navigationStyle": "custom"
+			}
+		},
+		{
+			"path": "pages/GRZX/userLogin",
+			"style": {
+				"navigationStyle": "custom"
+			}
+		},
+		{
+			"path": "pages/GRZX/wxLogin",
+			"style": {
+				"navigationStyle": "custom"
+			}
+		},
+		{
+			"path": "pages/GRZX/passengerInfo",
+			"style": {
+				"enablePullDownRefresh": true,
+				"navigationStyle": "custom"
+			}
+		},
+		{
+			"path": "pages/GRZX/addPassenger", //添加乘客信息
+			"style": {
+				"navigationStyle": "custom",
+				"app-plus": {
+					//app页面不显示滚动条
+					"scrollIndicator": "none"
+				}
+			}
+		},
+		{
+			"path": "pages/GRZX/addFreeChildren", //添加免票儿童
+			"style": {
+				"navigationStyle": "custom",
+				"app-plus": {
+					//app页面不显示滚动条
+					"scrollIndicator": "none"
+				}
+			}
+		},
+		{
+			"path": "pages/GRZX/notice", //推文通知
+			"style": {
+				// #ifdef H5
+				"navigationStyle": "custom",
+				// #endif
+				"navigationBarTitleText": "通知"
+			}
 		}
 	],
 	
@@ -278,6 +342,80 @@
 					"style": {}
 				}
 			]
+		},
+		
+		//---------------------------------------------第二个包：个人中心------------------------------------------
+		{
+			"root": "pages_GRZX/",
+			"pages": [
+		
+				{
+					"path": "pages/GRZX/personal",
+					"style": {}
+				},
+				{
+					"path": "pages/GRZX/set",
+					"style": {
+						"navigationBarTitleText": "设置"
+					}
+				},
+				{
+					"path": "pages/GRZX/aboutApp", //关于App
+					"style": {
+						"navigationBarTitleText": "关于App"
+					}
+				},
+				{
+					"path": "pages/GRZX/myNews", //我的消息
+					"style": {
+						"navigationBarTitleText": "我的消息"
+					}
+				},
+				{
+					"path": "pages/GRZX/infoList", //常用信息设置
+					"style": {
+						"enablePullDownRefresh": true,
+						"navigationStyle": "custom"
+					}
+				},
+				{
+					"path": "pages/GRZX/collection",
+					"style": {
+						"navigationBarTitleText": "我的收藏"
+					}
+				}, {
+					"path": "pages/GRZX/history",
+					"style": {
+						"navigationBarTitleText": "我的历史"
+					}
+				},
+				{
+					"path": "pages/GRZX/feedback",
+					"style": {
+						"navigationBarTitleText": "意见反馈"
+					}
+				},
+				{
+					"path": "pages/GRZX/gz_complaintList",
+					"style": {}
+				}, {
+					"path": "pages/GRZX/gz_complaintContent",
+					"style": {}
+				}, {
+					"path": "pages/GRZX/gz_complaintsPage",
+					"style": {}
+				}, {
+					"path": "pages/GRZX/gz_complaintText",
+					"style": {}
+				},
+				{
+					"path": "pages/GRZX/privacyService", //软件许可及服务协议
+					"style": {
+						"navigationBarTitleText": "软件许可及服务协议",
+						"navigationBarBackgroundColor": "#FFFFFF"
+					}
+				}
+			]
 		}
 	],
 	
@@ -308,7 +446,7 @@
 			//	"selectedIconPath":"static/HOME/shop_selector.png"
 			// },
 			{
-				"pagePath": "pages/HOME/ho_zhly",
+				"pagePath": "pages/GRZX/user",
 				"text": "我的",
 				"iconPath":"static/HOME/personalCenter.png",
 				"selectedIconPath":"static/HOME/personalCenter_selector.png"
