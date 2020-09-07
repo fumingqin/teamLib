@@ -1,16 +1,318 @@
 {
 	"pages": [ //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
 		{
-			"path": "pages/index/index",
+			"path": "pages/HOME/ho_zhly",
 			"style": {
-				"navigationBarTitleText": "uni-app"
+				"navigationBarTitleText": "旅游首页"
 			}
 		}
 	],
+	
+	"subPackages": [
+		//---------------------------------------------第一个包：旅游服务------------------------------------------
+		{
+			"root": "pages_LYFW/",
+			"pages": [
+				//----------------------------------通用页面----------------------------------
+				{
+					"path": "pages/LYFW/currency/imglist",
+					"style": {
+						"navigationBarTitleText": "全部图片"
+					}
+				},
+				{
+					"path": "pages/LYFW/currency/imgPreview",
+		
+					"style": {
+						"navigationBarTitleText": "查看图片"
+					}
+				}, {
+					"path": "pages/LYFW/currency/imglist2",
+					"style": {
+						"navigationBarTitleText": "全部图片"
+					}
+				},
+				{
+					"path": "pages/LYFW/currency/imglist3",
+					"style": {
+						"navigationBarTitleText": "全部图片"
+					}
+				},
+				{
+					"path": "pages/LYFW/currency/imgPreview2",
+		
+					"style": {
+						"navigationBarTitleText": "查看图片"
+					}
+				},
+				{
+					"path": "pages/LYFW/currency/imgPreview3",
+				
+					"style": {
+						"navigationBarTitleText": "查看图片"
+					}
+				},
+				{
+		
+					"path": "pages/LYFW/currency/travelDetails",
+					"style": {
+						// #ifdef APP-PLUS
+						"navigationStyle": "custom",
+						// #endif
+						"app-plus": {
+							"titleNView": {
+								"type": "transparent"
+							}
+						}
+					}
+				},
+				{
+					"path": "pages/LYFW/currency/ho_zhly",
+					"style": {
+						"navigationBarTitleText": "旅游服务",
+						// #ifdef APP-PLUS
+						"navigationStyle": "custom",
+						// #endif
+						"app-plus": {
+							"titleNView": {
+								"type": "transparent"
+							}
+						},
+						"enablePullDownRefresh": true, //设置为true表示当前页面开启下拉刷新
+						"onReachBottomDistance": 0,
+						"backgroundTextStyle": "dark" //下拉 loading 的样式，仅支持 dark/light
+					}
+				},
+				//----------------------------------跟团游页面----------------------------------
+				{
+					"path": "pages/LYFW/groupTour/groupTourList",
+					"style": {
+						"navigationBarTitleText": "跟团游列表",
+						"enablePullDownRefresh": true, //设置为true表示当前页面开启下拉刷新
+						"onReachBottomDistance": 0,
+						"backgroundTextStyle": "dark" //下拉 loading 的样式，仅支持 dark/light
+					}
+				}, {
+					"path": "pages/LYFW/groupTour/viewMore",
+					"style": {}
+				},
+				//----------------------------------自由行页面----------------------------------
+				{
+					"path": "pages/LYFW/independentTravel/it_list",
+					"style": {
+						"enablePullDownRefresh": true,
+						"navigationBarTitleText": "自由行"
+					}
+				},
+				//----------------------------------景区门票页面----------------------------------
+				{
+					"path": "pages/LYFW/scenicSpotTickets/ticketsList",
+		
+					"style": {
+						"navigationBarTitleText": "景区列表",
+						"enablePullDownRefresh": true,
+						"navigationBarBackgroundColor": "#FFFFFF",
+						"onReachBottomDistance": 0,
+						"app-plus": {
+							"softinputNavBar": "none"
+						}
+					}
+				},
+				{
+					"path": "pages/LYFW/scenicSpotTickets/ticketsDetails",
+					"style": {
+						"navigationBarTitleText": "景区详情",
+						// #ifdef APP-PLUS
+						"navigationStyle": "custom",
+						// #endif
+						"app-plus": {
+							"titleNView": {
+								"type": "transparent"
+							}
+						}
+					}
+				},
+		
+				{
+					"path": "pages/LYFW/scenicSpotTickets/selectivePayment",
+					"style": {
+						"navigationBarTitleText": "选择支付 ",
+						// #ifdef APP-PLUS
+						"navigationStyle": "custom",
+						// #endif
+						"app-plus": {
+							"titleNView": {
+								"type": "transparent"
+							}
+						}
+					}
+				}, {
+					"path": "pages/LYFW/scenicSpotTickets/successfulPayment",
+					"style": {
+						"navigationBarTitleText": "购票成功",
+						// #ifdef APP-PLUS
+						"navigationStyle": "custom",
+						// #endif
+						"app-plus": {
+							"titleNView": {
+								"type": "transparent"
+							}
+						}
+					}
+				}, {
+					"path": "pages/LYFW/scenicSpotTickets/orderAdd",
+					"style": {
+						"navigationBarTitleText": "填写订单",
+						// #ifdef APP-PLUS
+						"navigationStyle": "custom",
+						// #endif
+						"app-plus": {
+							"titleNView": {
+								"type": "transparent"
+							}
+						}
+					}
+				},
+				{
+					"path": "pages/LYFW/scenicSpotTickets/orderDetails",
+					"style": {
+						"navigationBarTitleText": "订单详情",
+						// #ifdef APP-PLUS
+						"navigationStyle": "custom",
+						// #endif
+						"app-plus": {
+							"titleNView": {
+								"type": "transparent"
+							}
+						}
+					}
+				},
+		
+				//----------------------------------旅游产品页面----------------------------------
+				{
+					"path": "pages/LYFW/tourismProducts/tp_ticketsList",
+		
+					"style": {
+						"navigationBarTitleText": "产品列表",
+						"enablePullDownRefresh": true,
+						"navigationBarBackgroundColor": "#FFFFFF",
+						"onReachBottomDistance": 0,
+						"app-plus": {
+							"softinputNavBar": "none"
+						}
+					}
+				},
+				{
+					"path": "pages/LYFW/tourismProducts/tp_ticketsDetails",
+					"style": {
+						"navigationBarTitleText": "产品详情",
+						// #ifdef APP-PLUS
+						"navigationStyle": "custom",
+						// #endif
+						"app-plus": {
+							"titleNView": {
+								"type": "transparent"
+							}
+						}
+					}
+				},
+		
+				{
+					"path": "pages/LYFW/tourismProducts/tp_selectivePayment",
+					"style": {
+						"navigationBarTitleText": "选择支付 ",
+						// #ifdef APP-PLUS
+						"navigationStyle": "custom",
+						// #endif
+						"app-plus": {
+							"titleNView": {
+								"type": "transparent"
+							}
+						}
+					}
+				}, {
+					"path": "pages/LYFW/tourismProducts/tp_successfulPayment",
+					"style": {
+						"navigationBarTitleText": "购买成功",
+						// #ifdef APP-PLUS
+						"navigationStyle": "custom",
+						// #endif
+						"app-plus": {
+							"titleNView": {
+								"type": "transparent"
+							}
+						}
+					}
+				}, {
+					"path": "pages/LYFW/tourismProducts/tp_orderAdd",
+					"style": {
+						"navigationBarTitleText": "填写订单",
+						// #ifdef APP-PLUS
+						"navigationStyle": "custom",
+						// #endif
+						"app-plus": {
+							"titleNView": {
+								"type": "transparent"
+							}
+						}
+					}
+				},
+				{
+					"path": "pages/LYFW/tourismProducts/tp_orderDetails",
+					"style": {
+						"navigationBarTitleText": "订单详情",
+						// #ifdef APP-PLUS
+						"navigationStyle": "custom",
+						// #endif
+						"app-plus": {
+							"titleNView": {
+								"type": "transparent"
+							}
+						}
+					}
+				}, {
+					"path": "pages/LYFW/tourismProducts/tp_chooseShuttle",
+					"style": {}
+				}, {
+					"path": "pages/LYFW/tourismProducts/tp_chooseShuttle2",
+					"style": {}
+				}
+			]
+		}
+	],
+	
 	"globalStyle": {
 		"navigationBarTextStyle": "black",
 		"navigationBarTitleText": "uni-app",
 		"navigationBarBackgroundColor": "#F8F8F8",
 		"backgroundColor": "#F8F8F8"
+	},
+	
+	"tabBar": {
+		"color": "#666666",
+		"selectedColor": "#666666",
+		// "selectedColor": "#0000ff",
+		"backgroundColor": "#FFFFFF",
+		"borderStyle": "black",
+		"list": [
+			{
+				"pagePath": "pages/HOME/ho_zhly",
+				"text": "首页",
+				"iconPath":"static/HOME/home.png",
+				"selectedIconPath":"static/HOME/home_selector.png"
+			},
+			// {
+			// 	"pagePath": "",
+			// 	"text": "商城",
+			//	"iconPath":"static/HOME/shop.png",
+			//	"selectedIconPath":"static/HOME/shop_selector.png"
+			// },
+			{
+				"pagePath": "pages/HOME/ho_zhly",
+				"text": "我的",
+				"iconPath":"static/HOME/personalCenter.png",
+				"selectedIconPath":"static/HOME/personalCenter_selector.png"
+			}
+		]
 	}
 }
